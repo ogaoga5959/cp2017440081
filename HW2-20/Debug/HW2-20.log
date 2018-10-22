@@ -1,4 +1,4 @@
-﻿빌드 시작: 2018-10-20 오후 10:32:18
+﻿빌드 시작: 2018-10-22 오후 3:53:35
      1>2 노드의 "C:\Users\창윤\Desktop\2017440081오창윤\HW2-20\HW2-20.vcxproj" 프로젝트(Build 대상)입니다.
      1>ClCompile:
          C:\Program Files (x86)\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt "HW2-20.cpp"
@@ -12,4 +12,4 @@
 
 빌드했습니다.
 
-경과 시간: 00:00:00.52
+경과 시간: 00:00:00.77
