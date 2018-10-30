@@ -18,7 +18,7 @@ int sum(int a, int b) {   //함수 선언    1, 함수의 이름(sum)
 //출력: 없음
 //부수효과: 화면에 good 출력
 void goodPrint(){
-	printf("good\n");
+	printf("good\n");	
 }
 
 int main (){

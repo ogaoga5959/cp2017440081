@@ -1,4 +1,4 @@
-﻿빌드 시작: 2018-10-16 오후 5:23:30
+﻿빌드 시작: 2018-10-30 오후 5:01:46
      1>2 노드의 "C:\Users\창윤\Desktop\2017440081오창윤\20181016loop\20181016loop.vcxproj" 프로젝트(Build 대상)입니다.
      1>ClCompile:
          C:\Program Files (x86)\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt "반복문.cpp"
@@ -10,4 +10,4 @@
 
 빌드했습니다.
 
-경과 시간: 00:00:00.93
+경과 시간: 00:00:01.29
