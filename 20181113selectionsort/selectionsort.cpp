@@ -36,7 +36,7 @@
 		for(int i=start +1; i<length; i++) {
 		if( min > arr[i])
 		{min=	arr[i];}
-		}
+		}	
 		return min;
 	}
     //함수: swapElements()
@@ -54,9 +54,9 @@
 	//출력: 없음
 	//부수효과: 배열이 정렬
 	void selectionSort(int* arr, int length) {
-    for(int i = 0; i<length-1; i++){
-		int minindex = findMinIndex(arr, length, i);
-		swapElement(arr, minindex, i);
+    for(int start = 0; start<length-1; start++){
+		int minindex = findMinIndex(arr, length, start);
+		swapElement(arr, minindex, start);
 	}
 	}
 		
