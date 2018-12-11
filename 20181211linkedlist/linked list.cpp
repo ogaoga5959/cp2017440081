@@ -5,6 +5,13 @@ typedef struct node{
 	int score;
 	struct node* pNext;
 } Node;
+typedef struct linkedList {
+	Node* pHead;
+	Node* pTail;
+	int nNode;
+}LinkedList;
+
+
 
 //ÇÔ¼ö averageLL() + ¼ø¼­µµ¸¦ ±×¸®¼¼¿ä
 //ÀÔ·Â:¿¬°á¸®½ºÆ® ( ¿¬°á¸®½ºÆ®ÀÇ Çìµå³ëµå Æ÷ÀÎÅÍ)
@@ -60,11 +67,12 @@ void addTail(Node* pHead, Node* pNode) {
 
 
 //ÇÔ¼ö printLL() È­¸é¿¡ ¿¬°á¸®½ºÆ®ÀÇ score°ªÀ» ­x·Â
-//ÀÔ·Â:¿¬°á¸®½ºÆ® ( ¿¬°á¸®½ºÆ®ÀÇ Çìµå³ëµå Æ÷ÀÎÅÍ)
+//ÀÔ·Â:¿¬°á¸®½ºÆ® 
 //Ãâ·Â: ¾øÀ½
 //ºÎ¼öÈ¿°ú: ¾øÀ½
-void printLL(Node* ptr) {
-   while(ptr != NULL) {
+void printLL(LinkedList* pList) {
+   Node* ptr = pList->pHead;
+	while(ptr != NULL) {
 	   printf("score = %d\n", ptr->score);
 	   ptr = ptr->pNext;
    }
@@ -83,13 +91,19 @@ Node* createNode(int input) {
 }
 
 //ÇÔ¼ö addHead()
-//ÀÔ·Â: ¿¬°á¸®½ºÆ®, »õ ³ëµå
+//ÀÔ·Â: ¿¬°á¸®½ºÆ® ±¸Á¶Ã¼ Æ÷ÀÎÅÍ(LinkedList*), »õ ³ëµå Æ÷ÀÎÅÍ
 //Ãâ·Â: ¾øÀ½
 //ºÎ¼öÈ¿°ú: ¿¬°á¸®½ºÆ® Çìµå¿¡ »õ ³ëµå¸¦ Ãß°¡
-//³ëµå¸¦ »õ·Î Ãß°¡ÇÏ¸é pHead°¡ °¡¸®Å°´Â ³ëµå°¡ µÇ¾î¾ßÇÔ.
-void addHead(Node** ppHead, Node* pNewNode) {
-	pNewNode->pNext = *ppHead;
-	*ppHead = pNewNode;
+//³ëµå¸¦ »õ·Î Ãß°¡ÇÏ¸é ³ëµå°¡ µÇ¾î¾ßÇÔ.
+void addHead(LinkedList* pList, Node* pNewNode) {
+	
+	if(pList->pHead == NULL)
+		pList->pTail = pNewNode;
+
+	pNewNode->pNext = pList->pHead; //#1
+	pList->pHead = pNewnode;//#2
+		(pList ->nNode)++;
+
 }
 
 
@@ -97,44 +111,19 @@ void addHead(Node** ppHead, Node* pNewNode) {
 //´ÙÀ½ÁÖ ½ÃÇè µÎ¼¼°³ ´Ù´ÙÀ½ÁÖµµ µÎ¼¼°³
 
 int main() {
-
-	double test;
-	test = 10/4; //1, 10/4->2¸¦ ¹İÈ¯, 2. Á¤¼öÇü 2¸¦ doubleÇü 2.0À¸·Î º¯È¯
-	printf("test = %f\n", test);
-
-	test = 10.0/4; //1, 10/4->2.5¸¦ ¹İÈ¯, 2. Á¤¼öÇü 2¸¦ doubleÇü 2.0À¸·Î º¯È¯
-	printf("test = %f\n", test);
-
-	test = ((double)10)/4; //1, 10/4->2¸¦ ¹İÈ¯, 2. Á¤¼öÇü 2¸¦ doubleÇü 2.0À¸·Î º¯È¯
-	printf("test = %f\n", test);
-
-	  Node* pHead =NULL, *ptr;//Çìµå³ëµåÀÇ Æ÷ÀÎÅÍ. NULLÀÌ¸é ¿¬°á¸®½ºÆ®°¡ ¾ø´Ù´Â ÀÇ¹Ì(·Î ¾à¼ÓÇÏÀÚ)
-	/*Node a,b;
-	a.score = 10; b.score=20;
-	a.pNext = &b; b.pNext = NULL;
-	pHead = &a;*/
-	pHead = createNode(11);
-	ptr = createNode(20);
-	addHead(&pHead, ptr);
-	printLL(pHead);
-	addTail(pHead, createNode(100));
-	printf("average = %f\n", averageLL(pHead));
+	LinkedList* pList;
+	pList = (LinkedList*) malloc(sizeof(LinkedList));
+	pList->pHead = pList->pTail = NULL; pList->nNode = 0;
+	addhead(pList, createNode(10));
+	addhead(pList, createNode(20));
+	addhead(pList, createNode(30));
+	addhead(pList, createNode(40));
 
 
-	pHead = NULL;
-    addTail(pHead, createNode(100));
 
+	printLL(pList);	
 
- //   Node* pHead =NULL, *ptr;//Çìµå³ëµåÀÇ Æ÷ÀÎÅÍ. NULLÀÌ¸é ¿¬°á¸®½ºÆ®°¡ ¾ø´Ù´Â ÀÇ¹Ì(·Î ¾à¼ÓÇÏÀÚ)
-	///*Node a,b;
-	//a.score = 10; b.score=20;
-	//a.pNext = &b; b.pNext = NULL;
-	//pHead = &a;*/
-	//pHead = createNode(10);
-	//ptr = createNode(20);
-	//addHead(&pHead, ptr);
-	//printLL(pHead);
-
-	//return 0;
 
 }
+
+//Æ÷ÀÎÅÍ : ¸Ş¸ğ¸® ÁÖ¼Ò

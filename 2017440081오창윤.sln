@@ -103,6 +103,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "20181204", "20181204\201812
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "20181204linkedlist", "20181204linkedlist\20181204linkedlist.vcxproj", "{5CCE0BEB-B07D-4109-90C4-22FAD9EF5F93}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "20181211linkedlist", "20181211linkedlist\20181211linkedlist.vcxproj", "{53949119-EFAE-4F0A-9400-BC7B0A1C185C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -313,6 +315,10 @@ Global
 		{5CCE0BEB-B07D-4109-90C4-22FAD9EF5F93}.Debug|Win32.Build.0 = Debug|Win32
 		{5CCE0BEB-B07D-4109-90C4-22FAD9EF5F93}.Release|Win32.ActiveCfg = Release|Win32
 		{5CCE0BEB-B07D-4109-90C4-22FAD9EF5F93}.Release|Win32.Build.0 = Release|Win32
+		{53949119-EFAE-4F0A-9400-BC7B0A1C185C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{53949119-EFAE-4F0A-9400-BC7B0A1C185C}.Debug|Win32.Build.0 = Debug|Win32
+		{53949119-EFAE-4F0A-9400-BC7B0A1C185C}.Release|Win32.ActiveCfg = Release|Win32
+		{53949119-EFAE-4F0A-9400-BC7B0A1C185C}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

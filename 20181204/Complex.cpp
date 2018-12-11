@@ -49,7 +49,7 @@
 	//	return &temp;
 	//}
 
-	//함수 returnConjugate() Version 1 : good
+	//함수 returnConjugate() Version 2 : good
 	//입력 : 복소수 포인터
 	//출력 : 복소수 변수
 	//부수효과 : 없음
